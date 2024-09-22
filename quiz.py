@@ -29,7 +29,7 @@ def generate_task(seed: int, task_number: int, n_digits: int) -> tuple[int, int]
 
 
 def main():
-    parser = ArgumentParser("Randomly generates a small multiplication quizzes. Seed is in seed.txt, if it exists (default: 0). Number of digits is in n_digits.txt, if it exists (default: 5). On execution, a file current_task_number.txt is created, which contains the number of the current task. In the default case (without arguments) this task number is read (without solution). Specify with --solution increment the current task number. Feel free to set manually and explore.")
+    parser = ArgumentParser("Randomly generates small multiplication quizzes. Seed is in seed.txt, if it exists (default: 0). Number of digits is in n_digits.txt, if it exists (default: 5). On execution, a file current_task_number.txt is created, which contains the number of the current task. In the default case (without arguments) this task number is read (without solution). Specify with --solution increment the current task number. Feel free to set manually and explore.")
     parser.add_argument("-s", "--solution", help="Shows the solutions to the current quiz", action="store_true")
     parser.add_argument("-n", "--task_number", help="Shows the quiz number `task_number` instead of the next quiz.", required=False, default=None)
     parser.add_argument("-e", "--explain", help="Explains why i use one file per variable instead of just json for 3 variables.", action="store_true")
